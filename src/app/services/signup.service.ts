@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -8,8 +8,8 @@ import { Observable, of } from 'rxjs';
 export class SignupService {
   constructor() {}
 
-  signup(formData: any): Observable<any> {
-    // TODO: actual API call here
+  signup(formData: NgForm): Observable<any> {
+    // TODO: Handle formData and pass values to API call
     return of('Signup successful!');
   }
 }

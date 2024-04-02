@@ -14,6 +14,7 @@ export class SignupFormComponent {
   constructor(private signupService: SignupService) {}
 
   submitForm(signupForm: NgForm) {
+    console.log(signupForm.controls);
     if (signupForm.valid) {
       this.signupService.signup(signupForm.value).subscribe(
         (response) => {
